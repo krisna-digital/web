@@ -327,7 +327,7 @@ function setupContactForm() {
         // Ambil data form
         const formData = {
             name: document.getElementById('name').value.trim(),
-            email: document.getElementById('email').value.trim(),
+            
             subject: document.getElementById('subject').value.trim(),
             message: document.getElementById('message').value.trim(),
             timestamp: new Date().toLocaleString('id-ID'),
@@ -448,14 +448,7 @@ function validateContactForm(formData) {
         });
     }
     
-    // Validasi email
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!formData.email || !emailRegex.test(formData.email)) {
-        errors.push({
-            field: 'email',
-            message: 'Email tidak valid'
-        });
-    }
+
     
     // Validasi subjek
     if (!formData.subject || formData.subject.trim().length < 5) {
