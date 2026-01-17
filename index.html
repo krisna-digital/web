@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Krisna Digital</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    
+    <!-- CSS Anda -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css#shop">
+</head>
+<body>
+  
+    
+    <!-- Navigation -->
+    <div id="navigation-container"></div>
+    <div class="navbar-spacer" style="height: 70px;"></div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h1 class="display-4 fw-bold mb-3">Selamat Datang di Krisna Digital</h1>
+                        <p class="lead mb-4">Temukan produk terbaik dengan kualitas premium dan harga terjangkau. Solusi Percetakan Lengkap dan Cepat untuk Kebutuhan Anda!</p>
+                        <div class="d-flex flex-wrap gap-3">
+                            <a href="products.html" class="btn btn-light btn-lg">
+                                <i class="bi bi-cart3"></i> Lihat Katalog
+                            </a>
+                            <a href="#features" class="btn btn-outline-light btn-lg">
+                                <i class="bi bi-info-circle"></i> Pelajari Lebih Lanjut
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mt-4 mt-lg-0">
+                        <div class="position-relative">
+                            <img src="images/hero.jpg" 
+                                 alt="Hero Image" 
+                                 class="img-fluid rounded shadow-lg">
+                            <div class="position-absolute bottom-0 start-0 m-4">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="container mb-5">
+            <div class="row text-center g-4">
+                <div class="col-md-4">
+                    <div class="card border-0 bg-light p-4">
+                        <h2 class="display-4 fw-bold text-primary">50+</h2>
+                        <p class="text-muted">Produk Tersedia</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card border-0 bg-light p-4">
+                        <h2 class="display-4 fw-bold text-success">500+</h2>
+                        <p class="text-muted">Pelanggan Puas</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card border-0 bg-light p-4">
+                        <h2 class="display-5 fw-bold text-warning">3 Tahun</h2>
+                        <p class="text-muted">Pengalaman</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="container mb-5">
+            <h2 class="text-center mb-5">Mengapa Memilih Krisna Digital?</h2>
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="card feature-card text-center p-4">
+                        <div class="card-icon">
+                            <i class="bi bi-truck"></i>
+                        </div>
+                        <h4>Pengiriman Cepat</h4>
+                        <p>Gratis ongkir untuk pesanan di atas Rp 150.000 dengan pengiriman 1-3 hari.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card feature-card text-center p-4">
+                        <div class="card-icon">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+                        <h4>Garansi 100%</h4>
+                        <p>Garansi ganti prod jika produk tidak sesuai atau mengalami kerusakan.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card feature-card text-center p-4">
+                        <div class="card-icon">
+                            <i class="bi bi-credit-card"></i>
+                        </div>
+                        <h4>Pembayaran Aman</h4>
+                        <p>Berbagai metode pembayaran yang aman dan terpercaya.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card feature-card text-center p-4">
+                        <div class="card-icon">
+                            <i class="bi bi-headset"></i>
+                        </div>
+                        <h4>Bantuan 24/7</h4>
+                        <p>Tim customer service siap membantu Anda kapan saja.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products -->
+        <section class="container mb-5">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2>Katalog</h2>
+                <a href="products.html" class="btn btn-primary">
+                    Lihat Semua Produk <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+            <div class="row g-4" id="featuredProducts">
+                <!-- Produk akan di-load via JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    
+    <!-- Include Footer -->
+    <div id="footer-container"></div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+    <!-- WhatsApp Configuration -->
+<script src="assets/js/whatsapp-config.js"></script>
+    <!-- Setelah main.js -->
+    <script src="assets/js/navbar.js"></script>
+    
+    <!-- Dashboard-specific JS -->
+    <script>
+        // Di script section index.html (bagian featured products)
+        document.addEventListener('DOMContentLoaded', function() {
+            const featuredProductsContainer = document.getElementById('featuredProducts');
+            if (featuredProductsContainer) {
+                // Ambil 8 produk pertama
+                const featuredProducts = products.slice(0, 8);
+                
+                featuredProductsContainer.innerHTML = featuredProducts.map(product => `
+                    <div class="col-md-3">
+                        <div class="card product-card shadow-sm h-100">
+                            <div class="position-relative">
+                                <img src="${product.image}" class="product-img" alt="${product.name}"
+                                    onerror="this.onerror=null; this.src='https://via.placeholder.com/500x500/e0e0e0/333333?text=No+Image';">
+                                <span class="badge position-absolute top-0 end-0 m-2 ${product.category === 'Cetak' ? 'bg-primary' : product.category === 'Nametag' ? 'bg-primary' : product.category === 'Layanan' ? 'bg-success' : product.category === 'Fotografi' ? 'bg-warning' : 'bg-info'}">
+                                    ${product.category}
+                                </span>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">${product.name}</h5>
+                                <div class="mb-2">
+                                    ${generateRatingStars(product.rating)}
+                                </div>
+                                <p class="card-text flex-grow-1">${product.description}</p>
+                                <div class="d-flex justify-content-between align-items-center mt-auto pt-3">
+                                    <h5 class="text-primary mb-0">${formatRupiah(product.price)}</h5>
+                                    <button class="btn btn-success btn-sm btn-buy" data-product-id="${product.id}">
+                                        <i class="bi bi-whatsapp"></i> Pesan
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+            }
+        });
+    </script>
+    <!-- Load Components -->
+    <script>
+        // Load header, navigation and footer components
+        document.addEventListener('DOMContentLoaded', function() {
+           
+            // Load navigation
+            fetch('pages/navigation.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navigation-container').innerHTML = data;
+                    updateNavbarActiveState();
+                })
+                .catch(error => console.error('Error loading navigation:', error));
+            
+            // Load footer
+            fetch('pages/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-container').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading footer:', error));
+        });
+    </script>
+  
+
+</body>
+</html>

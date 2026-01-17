@@ -1,0 +1,185 @@
+<!-- Navigation Component -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="images/logo.png" alt="Krisna Digital" class="img-fluid" style="max-height: 40px;">Krisna Digital
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        <i class="bi bi-house-door"></i> Dashboard
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="products.html">
+                        <i class="bi bi-box-seam"></i> Produk
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">
+                        <i class="bi bi-telephone"></i> Kontak
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="address.html">
+                        <i class="bi bi-geo-alt"></i> Alamat
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">
+                        <i class="bi bi-people"></i> Tentang Kami
+                    </a>
+                </li>
+            </ul>
+            
+        </div>
+    </div>
+</nav>
+
+
+
+<script>
+    // Update cart count
+    document.addEventListener('DOMContentLoaded', function() {
+        // Cart count
+        const cartCountElement = document.getElementById('cartCount');
+        if (cartCountElement) {
+            const cart = JSON.parse(localStorage.getItem('colorfulShopCart')) || [];
+            const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+            if (totalItems > 0) {
+                cartCountElement.textContent = totalItems;
+                cartCountElement.style.display = 'block';
+            }
+        }
+        
+        // Update active nav link
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            const linkPage = link.getAttribute('href');
+            
+            if (linkPage === currentPage || 
+                (currentPage === '' && linkPage === 'index.html') ||
+                (currentPage === 'index.html' && linkPage === '')) {
+                link.classList.add('active');
+            }
+        });
+        
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            const spacer = document.getElementById('navbar-spacer');
+            
+            if (window.scrollY > 10) {
+                navbar.classList.add('navbar-scrolled');
+                if (spacer) {
+                    spacer.style.height = '70px';
+                }
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+                if (spacer) {
+                    spacer.style.height = '80px';
+                }
+            }
+        });
+        
+        // Trigger initial scroll check
+        window.dispatchEvent(new Event('scroll'));
+    });
+</script>
+
+<style>
+    /* Navbar Fixed */
+    .navbar.fixed-top {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+        transition: all 0.3s ease;
+    }
+    
+    /* Efek saat scroll */
+    .navbar-scrolled {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        background-color: rgba(255, 255, 255, 0.95) !important;
+    }
+    
+    /* Navbar brand transition */
+    .navbar-brand {
+        transition: all 0.3s ease;
+    }
+    
+    .navbar-scrolled .navbar-brand {
+        transform: scale(0.95);
+    }
+    
+    /* Navbar link hover effect */
+    .nav-link {
+        position: relative;
+        transition: all 0.3s ease;
+    }
+    
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background: linear-gradient(90deg, #4c4c4d, #444446);
+        transition: all 0.3s ease;
+        transform: translateX(-50%);
+    }
+    
+    .nav-link:hover::after,
+    .nav-link.active::after {
+        width: 80%;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 991.98px) {
+        .navbar.fixed-top {
+            position: fixed !important;
+        }
+        
+        .navbar-collapse {
+            background: white;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            margin-top: 10px;
+        }
+        
+        #navbar-spacer {
+            height: 70px;
+        }
+        
+        .navbar-scrolled ~ #navbar-spacer {
+            height: 65px;
+        }
+    }
+    
+    @media (max-width: 767.98px) {
+        #navbar-spacer {
+            height: 65px;
+        }
+        
+        .navbar-scrolled ~ #navbar-spacer {
+            height: 60px;
+        }
+        
+        .navbar-brand {
+            font-size: 1.4rem;
+        }
+    }
+</style>

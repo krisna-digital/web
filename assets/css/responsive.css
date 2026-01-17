@@ -1,0 +1,514 @@
+/* ============================================
+   RESPONSIVE CSS
+   ============================================ */
+
+/* Extra Small Devices (Phones, less than 576px) */
+@media (max-width: 575.98px) {
+    /* Typography */
+    .display-4 {
+        font-size: 2rem !important;
+    }
+    
+    h1 {
+        font-size: 1.75rem !important;
+    }
+    
+    h2 {
+        font-size: 1.5rem !important;
+    }
+    
+    h3 {
+        font-size: 1.25rem !important;
+    }
+    
+    .lead {
+        font-size: 1rem !important;
+    }
+    
+    /* Navigation */
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+    
+    .navbar-nav {
+        text-align: center;
+        margin-top: 1rem;
+    }
+    
+    .nav-link {
+        padding: 0.75rem 0 !important;
+        justify-content: center;
+    }
+    
+    /* Hero Section */
+    .hero-section {
+        padding: 2rem 0 !important;
+        border-radius: 0 0 15px 15px !important;
+    }
+    
+    .hero-section .btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    
+    /* Cards */
+    .feature-card,
+    .product-card,
+    .address-card {
+        margin-bottom: 1rem;
+    }
+    
+    .product-img {
+        height: 150px !important;
+    }
+    
+    /* Buttons */
+    .btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    
+    .btn-group {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .btn-group .btn {
+        border-radius: 10px !important;
+        margin-bottom: 0.5rem;
+    }
+    
+    /* Forms */
+    .contact-form {
+        padding: 1.5rem !important;
+    }
+    
+    /* Footer */
+    footer {
+        padding: 2rem 0 1rem !important;
+    }
+    
+    footer .row > div {
+        margin-bottom: 1.5rem;
+    }
+    
+    /* Team */
+    .team-img {
+        width: 120px !important;
+        height: 120px !important;
+    }
+}
+
+/* Small Devices (Landscape Phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .display-4 {
+        font-size: 2.25rem;
+    }
+    
+    .hero-section {
+        padding: 3rem 0;
+    }
+    
+    .product-img {
+        height: 180px;
+    }
+    
+    .team-img {
+        width: 140px;
+        height: 140px;
+    }
+}
+
+/* Medium Devices (Tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .display-4 {
+        font-size: 2.5rem;
+    }
+    
+    .navbar-nav .nav-link {
+        padding: 0.5rem 0.75rem !important;
+    }
+    
+    /* Adjust product grid for tablets */
+    .col-md-3 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    
+    .product-img {
+        height: 180px;
+    }
+}
+
+/* Large Devices (Desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    /* Desktop adjustments */
+    .container {
+        max-width: 960px;
+    }
+    
+    .product-img {
+        height: 180px;
+    }
+}
+
+/* Extra Large Devices (Large Desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+@media print {
+    /* Hide unnecessary elements for printing */
+    .navbar,
+    footer,
+    .btn,
+    .product-card .btn-buy,
+    .contact-form button,
+    .hero-section .btn {
+        display: none !important;
+    }
+    
+    /* Improve print layout */
+    body {
+        font-size: 12pt;
+        color: #000;
+        background: #fff;
+    }
+    
+    .container {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .page-header {
+        background: #fff !important;
+        color: #000 !important;
+        border-bottom: 2px solid #000;
+    }
+    
+    /* Cards for print */
+    .card {
+        border: 1px solid #000 !important;
+        box-shadow: none !important;
+    }
+    
+    /* Links for print */
+    a {
+        color: #000 !important;
+        text-decoration: underline;
+    }
+    
+    /* Show URLs after links */
+    a[href]:after {
+        content: " (" attr(href) ")";
+        font-size: 0.9em;
+        font-weight: normal;
+    }
+    
+    /* Don't show URLs for internal links */
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+}
+
+
+
+/* ============================================
+   HIGH CONTRAST MODE
+   ============================================ */
+@media (prefers-contrast: high) {
+    :root {
+        --primary-color: #0000ff;
+        --secondary-color: #ff0000;
+    }
+    
+    body {
+        color: #000;
+        background: #fff;
+    }
+    
+    .btn {
+        border: 2px solid #000;
+    }
+}
+
+/* ============================================
+   REDUCED MOTION
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    .feature-card:hover,
+    .product-card:hover {
+        transform: none !important;
+    }
+}
+
+/* ============================================
+   ORIENTATION SPECIFIC STYLES
+   ============================================ */
+/* Portrait */
+@media (orientation: portrait) {
+    .hero-section {
+        padding: 3rem 0;
+    }
+}
+
+/* Landscape */
+@media (orientation: landscape) and (max-height: 500px) {
+    .navbar {
+        position: static !important;
+    }
+    
+    .hero-section {
+        padding: 2rem 0;
+        min-height: auto;
+    }
+}
+
+/* ============================================
+   SPECIFIC DEVICE FIXES
+   ============================================ */
+/* iPhone X/XS/11 Pro notch support */
+@supports (padding: max(0px)) {
+    body {
+        padding-left: min(0vmin, env(safe-area-inset-left));
+        padding-right: min(0vmin, env(safe-area-inset-right));
+    }
+    
+    .navbar {
+        padding-left: max(1rem, env(safe-area-inset-left));
+        padding-right: max(1rem, env(safe-area-inset-right));
+    }
+}
+
+/* Fix for iOS form elements */
+input,
+textarea,
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 10px;
+}
+
+/* Fix for Chrome autofill background */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+@media (prefers-color-scheme: dark) {
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus {
+        -webkit-box-shadow: 0 0 0px 1000px #2d2d2d inset !important;
+        -webkit-text-fill-color: #e0e0e0 !important;
+    }
+}
+
+/* ============================================
+   UTILITY CLASSES FOR RESPONSIVE
+   ============================================ */
+.text-center-xs {
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .text-center-xs {
+        text-align: left;
+    }
+}
+
+.hide-on-mobile {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .hide-on-mobile {
+        display: block;
+    }
+    
+    .hide-on-desktop {
+        display: none;
+    }
+}
+
+/* ============================================
+   GRID GAP FIXES
+   ============================================ */
+.row.gap-1 {
+    margin-left: -0.25rem;
+    margin-right: -0.25rem;
+}
+
+.row.gap-1 > [class*="col-"] {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+}
+
+.row.gap-2 {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+}
+
+.row.gap-2 > [class*="col-"] {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.row.gap-3 {
+    margin-left: -1rem;
+    margin-right: -1rem;
+}
+
+.row.gap-3 > [class*="col-"] {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* ============================================
+   IMAGE RESPONSIVENESS
+   ============================================ */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.img-cover {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.img-contain {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+/* Aspect ratio containers */
+.aspect-ratio-16-9 {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+}
+
+.aspect-ratio-4-3 {
+    position: relative;
+    padding-bottom: 75%; /* 4:3 */
+}
+
+.aspect-ratio-1-1 {
+    position: relative;
+    padding-bottom: 100%; /* 1:1 */
+}
+
+.aspect-ratio-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* ============================================
+   FONT SIZE ADJUSTMENTS
+   ============================================ */
+html {
+    font-size: 16px;
+}
+
+@media (max-width: 767px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1200px) {
+    html {
+        font-size: 17px;
+    }
+}
+
+/* ============================================
+   FORM RESPONSIVENESS
+   ============================================ */
+.form-row-responsive {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+}
+
+.form-col-responsive {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+@media (min-width: 768px) {
+    .form-col-responsive {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+/* ============================================
+   TABLE RESPONSIVENESS
+   ============================================ */
+.table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.table-responsive table {
+    min-width: 600px;
+}
+
+/* ============================================
+   CUSTOM SCROLLBAR
+   ============================================ */
+@media (min-width: 768px) {
+    ::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 5px;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: var(--primary-color);
+        border-radius: 5px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+        background: #a1a1a1;
+    }
+}
