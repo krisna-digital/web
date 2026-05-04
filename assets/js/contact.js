@@ -374,14 +374,13 @@ function sendContactToWhatsApp(formData) {
 📨 *PESAN BARU DARI WEBSITE*
 ────────────────────
 👤 *Nama:* ${formData.name}
-📧 *Email:* ${formData.email}
 📋 *Subjek:* ${formData.subject}
 ────────────────────
 💬 *Pesan:*
 ${formData.message}
 ────────────────────
 🕐 *Waktu:* ${formData.timestamp}
-🌐 *Dari Halaman:* ${formData.page}
+
 ────────────────────
 *Pesan ini dikirim otomatis dari website.*
     `.trim();
