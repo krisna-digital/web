@@ -48,7 +48,7 @@ function renderProducts(products, container, page = 1) {
     }
     
     container.innerHTML = paginatedProducts.map(product => `
-        <div class="col-3 col-md-3 mb-4" data-product-id="${product.id}">
+        <div class="col-6 col-md-6 mb-4" data-product-id="${product.id}">
             <div class="card product-card shadow-sm h-100">
                 <div class="position-relative">
                     <img src="${product.image}" class="product-img" alt="${product.name}">
@@ -65,10 +65,9 @@ function renderProducts(products, container, page = 1) {
                     <div class="mb-2">
                         ${generateRatingStars(product.rating)}
                     </div>
-                    <p class="card-text flex-grow-1">${product.description}</p>
                     <div class="mt-3">
                         <span class="badge stock-badge ${product.stock > 0 ? 'bg-success' : 'bg-danger'}">
-                            Stok: ${product.stock}
+                            Rp ${product.price.toLocaleString('id-ID')}
                         </span>
                     </div>
                     <div class="d-flex justify-content-between align-items-center mt-auto pt-3">

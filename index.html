@@ -160,7 +160,7 @@
                 const featuredProducts = products.slice(0, 8);
                 
                 featuredProductsContainer.innerHTML = featuredProducts.map(product => `
-                    <div class="col-3 col-md-3">
+                    <div class="col-6 col-md-6">
                         <div class="card product-card shadow-sm h-100">
                             <div class="position-relative">
                                 <img src="${product.image}" class="product-img" alt="${product.name}"
@@ -174,8 +174,9 @@
                                 <div class="mb-2">
                                     ${generateRatingStars(product.rating)}
                                 </div>
-                                <p class="card-text flex-grow-1">${product.description}</p>
-                               
+                                <div class="mt-3">
+                                    <span class="badge bg-success">Rp ${product.price.toLocaleString('id-ID')}</span>
+                                </div>
                             </div>
                         </div>
                     </div>
