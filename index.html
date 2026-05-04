@@ -83,7 +83,7 @@
         <section id="features" class="container mb-5">
             <h2 class="text-center mb-5">Mengapa Memilih Krisna Digital?</h2>
             <div class="row g-4">
-                <div class="col-md-3">
+                <div class="col-6 col-md-3">
                     <div class="card feature-card text-center p-4">
                         <div class="card-icon">
                             <i class="bi bi-truck"></i>
@@ -92,7 +92,7 @@
                         <p>Gratis ongkir untuk pesanan di atas Rp 150.000 dengan pengiriman 1-3 hari.</p>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-6 col-md-3">
                     <div class="card feature-card text-center p-4">
                         <div class="card-icon">
                             <i class="bi bi-shield-check"></i>
@@ -101,7 +101,7 @@
                         <p>Garansi ganti prod jika produk tidak sesuai atau mengalami kerusakan.</p>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-6 col-md-3">
                     <div class="card feature-card text-center p-4">
                         <div class="card-icon">
                             <i class="bi bi-credit-card"></i>
@@ -110,7 +110,7 @@
                         <p>Berbagai metode pembayaran yang aman dan terpercaya.</p>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-6 col-md-3">
                     <div class="card feature-card text-center p-4">
                         <div class="card-icon">
                             <i class="bi bi-headset"></i>
@@ -160,7 +160,7 @@
                 const featuredProducts = products.slice(0, 8);
                 
                 featuredProductsContainer.innerHTML = featuredProducts.map(product => `
-                    <div class="col-md-3">
+                    <div class="col-3 col-md-3">
                         <div class="card product-card shadow-sm h-100">
                             <div class="position-relative">
                                 <img src="${product.image}" class="product-img" alt="${product.name}"
@@ -175,12 +175,7 @@
                                     ${generateRatingStars(product.rating)}
                                 </div>
                                 <p class="card-text flex-grow-1">${product.description}</p>
-                                <div class="d-flex justify-content-between align-items-center mt-auto pt-3">
-                                    <h5 class="text-primary mb-0">${formatRupiah(product.price)}</h5>
-                                    <button class="btn btn-success btn-sm btn-buy" data-product-id="${product.id}">
-                                        <i class="bi bi-whatsapp"></i> Pesan
-                                    </button>
-                                </div>
+                               
                             </div>
                         </div>
                     </div>
