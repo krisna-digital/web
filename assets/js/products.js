@@ -48,7 +48,7 @@ function renderProducts(products, container, page = 1) {
     }
     
     container.innerHTML = paginatedProducts.map(product => `
-        <div class="col-md-3 mb-4" data-product-id="${product.id}">
+        <div class="col-3 col-md-3 mb-4" data-product-id="${product.id}">
             <div class="card product-card shadow-sm h-100">
                 <div class="position-relative">
                     <img src="${product.image}" class="product-img" alt="${product.name}">
@@ -72,13 +72,7 @@ function renderProducts(products, container, page = 1) {
                         </span>
                     </div>
                     <div class="d-flex justify-content-between align-items-center mt-auto pt-3">
-                        <h5 class="text-primary mb-0">${formatRupiah(product.price)}</h5>
-                        <button class="btn ${product.stock > 0 ? 'btn-success' : 'btn-secondary'} btn-sm btn-buy" 
-                                data-product-id="${product.id}"
-                                ${product.stock <= 0 ? 'disabled' : ''}>
-                            <i class="bi ${product.stock > 0 ? 'bi-whatsapp' : 'bi-cart-x'}"></i> 
-                            ${product.stock > 0 ? 'Pesan' : 'Habis'}
-                        </button>
+                        
                     </div>
                 </div>
             </div>
